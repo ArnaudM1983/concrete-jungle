@@ -1,0 +1,57 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--textColor);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 30px;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.title {
+    color: var(--bg);
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.dateBillet {
+    color: #8C1C13;
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.separator{
+    background-color: #003852;
+    border: none;
+    height: 1px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.container p {
+    color: #003852;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.button {
+    text-decoration: none;
+    font-weight: 600;
+    background-color: #8C1C13;
+    color: white;
+    font-size: 2rem;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+@media (max-width: 520px) {
+    .button {
+        font-size: 1rem;
+    }
+}

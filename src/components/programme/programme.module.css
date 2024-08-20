@@ -1,0 +1,94 @@
+.container{
+    background-color: var(--bg);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 30px;
+    
+}
+
+.title{
+    color: var(--softTextColor);
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.titleDate{
+    color: var(--textColor);
+}
+
+.label{
+    color: var(--textColor);
+}
+
+.filter{
+    display: flex;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+.cardContainer{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    background-color: var(--softBg);
+    padding: 1rem 1rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 2px 2px 0 #0003;
+    width: 300px;
+}
+
+.titleCard{
+    color: var(--softTextColor);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.imageContainer{
+    height: 200px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.4rem;
+}
+
+.date{
+    color: var(--textColor);
+}
+
+.location{
+    color: #ffa101;
+}
+
+.time{
+    color: var(--textColor);
+}
+
+@media (max-width: 600px) {
+    .filter{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+@media (min-width: 600px) {
+    .cardContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+}

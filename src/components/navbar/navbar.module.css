@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s;
+    position: sticky;
+    z-index: 10;
+    background-color: var(--bg);
+}
+
+.show {
+    top: 0;
+    /* Navbar visible */
+}
+
+.hide {
+    top: -100px;
+    /* cache complètement la navbar */
+}
+
+.social {
+    display: flex;
+    gap: 10px;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .logo {
+        font-size: 25px;
+    }
+
+    .links {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .social {
+        display: none;
+    }
+
+    .links {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .links {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .link {
+        display: none;
+    }
+
+    .links {
+        font-size: 18px;
+    }
+}

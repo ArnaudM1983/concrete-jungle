@@ -1,0 +1,50 @@
+.container{
+    background-color: var(--bg);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 30px;
+    
+}
+
+.title{
+    color: var(--softTextColor);
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.cardContainer{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    background-color: var(--softBg);
+    padding: 1rem 1rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 2px 2px 0 #0003;
+    
+}
+
+.titleCard{
+    color: #ffa101;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 420px) {
+    .title{
+        font-size: 1.5rem;
+    }
+    .titleCard{
+        font-size: 1.2rem;
+    }
+    .text{
+        font-size: 0.9rem;
+    }
+    
+}

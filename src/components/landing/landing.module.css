@@ -1,0 +1,57 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/landing.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.title {
+    color: white;
+    font-size: 4rem;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+.date {
+    color: var(--textColor);
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}
+
+.button {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 200;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+    .date{
+        font-size: 1rem;
+    }
+    .button{
+        font-size: 1.5rem;
+    }
+    .container{
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        
+    }
+}
