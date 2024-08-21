@@ -39,11 +39,11 @@ const Navbar = () => {
       </div>
       <div className={styles.links}>
         <Link href="/" className={styles.link}>Accueil</Link>
-        <Link href="#programme" className={styles.link}>Programmation</Link>
-        <Link href="#billeterie" className={styles.link}>Billetterie</Link>
-        <Link href="#infos" className={styles.link}>FAQ</Link>
-        <Link href="/" className={styles.link}>Partenaires</Link>
-        <Link href="/" className={styles.link}>Carte</Link>
+        <Link href="/#programme" className={styles.link}>Programmation</Link>
+        <Link href="/#billeterie" className={styles.link}>Billetterie</Link>
+        <Link href="/#infos" className={styles.link}>FAQ</Link>
+        <Link href="/#map" className={styles.link}>Carte</Link>
+        <Link href="/#partenaires" className={styles.link}>Partenaires</Link>
         <AuthLinks />
       </div>
       <div className={styles.social}>

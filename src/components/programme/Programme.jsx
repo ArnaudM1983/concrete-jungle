@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './programme.module.css'
+import Link from 'next/link'
 
 const Programme = () => {
   return (
@@ -52,6 +53,19 @@ const Programme = () => {
 
       {/* Programmation filtrée */}
       <div className={styles.cardContainer}>
+        <Link href="/artistes" className={styles.link}>
+          <div className={styles.card}>
+            <div className={styles.imageContainer}>
+              <img src="/groupe.jpg" alt="" className={styles.image} />
+            </div>
+            <div className={styles.textContainer}>
+              <h2 className={styles.titleCard}>Groupe Exemple</h2>
+              <p className={styles.location}>Scène principale</p>
+              <p className={styles.date}>14/08/2025</p>
+              <p className={styles.time}>15:00</p>
+            </div>
+          </div>
+        </Link>
         <div className={styles.card}>
           <div className={styles.imageContainer}>
             <img src="/groupe.jpg" alt="" className={styles.image} />
@@ -68,9 +82,9 @@ const Programme = () => {
             <img src="/groupe.jpg" alt="" className={styles.image} />
           </div>
           <div className={styles.textContainer}>
-            <h2 className={styles.title}>Groupe Exemple</h2>
-            <p className={styles.date}>14/08/2025</p>
+            <h2 className={styles.titleCard}>Groupe Exemple</h2>
             <p className={styles.location}>Scène principale</p>
+            <p className={styles.date}>14/08/2025</p>
             <p className={styles.time}>15:00</p>
           </div>
         </div>
@@ -79,9 +93,9 @@ const Programme = () => {
             <img src="/groupe.jpg" alt="" className={styles.image} />
           </div>
           <div className={styles.textContainer}>
-            <h2 className={styles.title}>Groupe Exemple</h2>
-            <p className={styles.date}>14/08/2025</p>
+            <h2 className={styles.titleCard}>Groupe Exemple</h2>
             <p className={styles.location}>Scène principale</p>
+            <p className={styles.date}>14/08/2025</p>
             <p className={styles.time}>15:00</p>
           </div>
         </div>
@@ -90,9 +104,9 @@ const Programme = () => {
             <img src="/groupe.jpg" alt="" className={styles.image} />
           </div>
           <div className={styles.textContainer}>
-            <h2 className={styles.title}>Groupe Exemple</h2>
-            <p className={styles.date}>14/08/2025</p>
+            <h2 className={styles.titleCard}>Groupe Exemple</h2>
             <p className={styles.location}>Scène principale</p>
+            <p className={styles.date}>14/08/2025</p>
             <p className={styles.time}>15:00</p>
           </div>
         </div>
@@ -101,12 +115,13 @@ const Programme = () => {
             <img src="/groupe.jpg" alt="" className={styles.image} />
           </div>
           <div className={styles.textContainer}>
-            <h2 className={styles.title}>Groupe Exemple</h2>
-            <p className={styles.date}>14/08/2025</p>
+            <h2 className={styles.titleCard}>Groupe Exemple</h2>
             <p className={styles.location}>Scène principale</p>
+            <p className={styles.date}>14/08/2025</p>
             <p className={styles.time}>15:00</p>
           </div>
         </div>
+
       </div>
 
     </div>

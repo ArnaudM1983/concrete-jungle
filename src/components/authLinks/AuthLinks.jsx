@@ -32,11 +32,11 @@ const AuthLinks = () => {
       {open && (
         <div className={styles.responsiveMenu}>
           <Link href='/' onClick={handleLinkClick}>Accueil</Link>
-          <Link href='#programme' onClick={handleLinkClick}>Programmation</Link>
-          <Link href='#billeterie' onClick={handleLinkClick}>Billetterie</Link>
-          <Link href="#infos" onClick={handleLinkClick}>FAQ / Informations pratiques</Link>
-          <Link href='/partenaires' onClick={handleLinkClick}>Partenaires</Link>
-          <Link href='/carte' onClick={handleLinkClick}>Carte du festival</Link>
+          <Link href='/#programme' onClick={handleLinkClick}>Programmation</Link>
+          <Link href='/#billeterie' onClick={handleLinkClick}>Billetterie</Link>
+          <Link href="/#infos" onClick={handleLinkClick}>FAQ / Informations pratiques</Link>
+          <Link href='/#partenaires' onClick={handleLinkClick}>Partenaires</Link>
+          <Link href='/#map' onClick={handleLinkClick}>Carte du festival</Link>
           {status === "notauthenticated" ? (
             <Link href="./login" onClick={handleLinkClick}>Login</Link>
           ) : (

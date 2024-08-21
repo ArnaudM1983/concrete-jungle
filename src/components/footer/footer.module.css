@@ -1,2 +1,57 @@
 .container{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.reseaux{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 20px;
+}
+
+.icone{
+    color: #ffa101;
+    width: 27px;
+    height: 27px;
+}
+
+.links{
+    font-size: 15px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.link::after {
+    content: "•"; /* The separator (a dot) */
+    margin-left: 1rem; /* Optional: spacing between link text and the dot */
+  }
+  
+  .link:last-child::after {
+    content: ""; /* Removes the dot after the last link */
+  }
+
+  @media (max-width: 600px) {
+    .links{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 460px) {
+    .icone{
+        width: 20px;
+        height: 20px;
+    }
+    .link::after {
+        display: none;
+      }
+    .links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }  
 }

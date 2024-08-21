@@ -1,0 +1,42 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--textColor);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 30px;
+    height: 100vh;
+    overflow-y: scroll;
+    padding-bottom: 30px;
+}
+
+.title {
+    color: var(--bg);
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.filter{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.label{
+    color: var(--bg);
+}
+
+.map{
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 460px) {
+    .title{
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+}

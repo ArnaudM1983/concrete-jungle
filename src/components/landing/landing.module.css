@@ -33,6 +33,11 @@
     border: 2px solid;
     border-radius: 5px;
     padding: 0.5rem 1rem;
+    transition: transform 0.3s ease;
+}
+
+.button:hover{
+    transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
