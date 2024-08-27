@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import prisma from "../../../../utils/connect"; 
 
+
 // Fonction pour gérer les requêtes GET
 export const GET = async (request) => {
   try {

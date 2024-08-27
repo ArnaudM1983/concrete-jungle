@@ -4,7 +4,7 @@ import styles from './faq.module.css'
 // Fonction pour récupérer les données de l'API
 const getData = async () => {
     // variable d'environnement pour l'URL de l'API
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    const apiUrl = '/api';
   
     // Effectue une requête GET pour obtenir les données depuis l'endpoint /infos
     const res = await fetch(`${apiUrl}/infos`, {

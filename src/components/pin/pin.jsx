@@ -5,7 +5,7 @@ import { Marker, Popup } from 'react-leaflet';
 
 // Fonction pour récupérer les données avec un filtre par catégorie
 const getData = async (categoryFilter) => {
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  const apiUrl = '/api';
   const queryParams = categoryFilter ? `?category=${categoryFilter}` : '';
   const res = await fetch(`${apiUrl}/map${queryParams}`, {
     cache: 'no-store',

@@ -7,7 +7,7 @@ import { fr } from 'date-fns/locale';
 
 // Fonction pour récupérer les données avec des filtres
 const getData = async (filters) => {
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  const apiUrl = '/api';
   const queryParams = new URLSearchParams(filters).toString();
   const res = await fetch(`${apiUrl}/programme?${queryParams}`, { cache: "no-store" });
 
@@ -20,7 +20,7 @@ const getData = async (filters) => {
 
 // Fonction pour récupérer les options de filtre
 const getFilterOptions = async () => {
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  const apiUrl = '/api';
   const res = await fetch(`${apiUrl}/filters`, { cache: "no-store" });
 
   if (!res.ok) {

@@ -4,7 +4,7 @@ import styles from './actus.module.css';
 
 // Fonction pour récupérer les données de la page via l'API
 const fetchPageData = async (page, limit) => {
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  const apiUrl = '/api';
 
   const res = await fetch(`${apiUrl}/actus?page=${page}&limit=${limit}`, {
     cache: 'no-store',
