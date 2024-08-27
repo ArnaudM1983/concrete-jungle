@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 // Fonction pour récupérer les données de l'artiste depuis l'API
 const fetchArtistData = async (id) => {
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  const apiUrl = 'https://concrete-jungle.vercel.app/api';
 
   // Requête pour obtenir les données de l'artiste par ID
   const res = await fetch(`${apiUrl}/programme/${id}`, {
