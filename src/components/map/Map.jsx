@@ -4,7 +4,7 @@ import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 import "leaflet-defaulticon-compatibility";
 import styles from './map.module.css';
 import { MapContainer, TileLayer } from "react-leaflet";
-import Pin from "@/components/pin/Pin";
+import Pin from "@/components/pin/pin";
 import { useEffect, useState } from "react";
 
 export default function Map() {
