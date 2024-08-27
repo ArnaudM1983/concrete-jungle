@@ -7,7 +7,7 @@ const Cookies = () => {
         <div className={styles.container}>
             <h1 className={styles.title}>POLITIQUE DE COOKIES</h1>
             <div className={styles.listContainer}>
-                <h2 className={styles.subtitle}>1. Qu'est-ce qu&apos;un cookie ?</h2>
+                <h2 className={styles.subtitle}>1. Qu&apos;est-ce qu&apos;un cookie ?</h2>
                 <p className={styles.text}>Un cookie est un petit fichier texte que notre site web stocke sur votre appareil (ordinateur, smartphone, tablette) lorsque vous le visitez. Les cookies permettent au site de reconnaître votre appareil et de mémoriser certaines informations vous concernant, comme vos préférences ou vos actions précédentes.</p>
                 <h2 className={styles.subtitle}>2. Types de cookies que nous utilisons</h2>
                 <p className={styles.text}>Nous utilisons différents types de cookies sur notre site :</p>
