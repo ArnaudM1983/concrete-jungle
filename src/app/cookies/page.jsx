@@ -13,7 +13,7 @@ const Cookies = () => {
                 <p className={styles.text}>Nous utilisons différents types de cookies sur notre site :</p>
                 <ul className={styles.list}>
                     <li>Cookies nécessaires : Ces cookies sont indispensables au bon fonctionnement du site. Ils vous permettent de naviguer sur le site et d&apos;utiliser ses fonctionnalités, comme l&apos;accès aux zones sécurisées.</li>
-                    <li>Cookies de performance : Ces cookies collectent des informations sur la manière dont les visiteurs utilisent notre site, par exemple les pages les plus visitées. Ces données nous permettent d'améliorer le fonctionnement du site.</li>
+                    <li>Cookies de performance : Ces cookies collectent des informations sur la manière dont les visiteurs utilisent notre site, par exemple les pages les plus visitées. Ces données nous permettent d&apos;améliorer le fonctionnement du site.</li>
                     <li>Cookies de fonctionnalité : Ces cookies permettent au site de se souvenir de vos choix (comme votre nom d&apos;utilisateur, langue ou région) et fournissent des fonctionnalités améliorées et personnalisées.</li>
                     <li>Cookies de ciblage ou publicitaires : Ces cookies sont utilisés pour diffuser des publicités pertinentes pour vous et adaptées à vos centres d&apos;intérêt. Ils servent également à limiter le nombre de fois que vous voyez une publicité et à mesurer l&apos;efficacité des campagnes publicitaires.</li>
                 </ul>
