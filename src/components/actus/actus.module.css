@@ -1,13 +1,15 @@
-.container{
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: white;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 30px;
     padding-bottom: 30px;
-    
 }
 
-.title{
+.title {
     font-weight: 500;
     font-size: 2.5rem;
     color: var(--bg);
@@ -15,37 +17,116 @@
     padding-bottom: 30px;
 }
 
-.card{
+.card {
     display: flex;
     gap: 1.2rem;
     background-color: var(--textColor);
     padding: 1rem 1rem;
     border-radius: 0.8rem;
-    box-shadow: 0 4px 4px 0 #0003;
+    width: 100%;
+    max-width: 800px;
+    flex-direction: row;
 }
 
-.image{
+.image {
     border-radius: 0.4rem;
+    width: 100%;
+    max-width: 300px;
+    max-height: 200px;
+    height: auto;
+    object-fit: cover;
 }
 
-.subtitle{
+.textContainer {
+    flex: 1;
+}
+
+.subtitle {
     color: var(--bg);
 }
 
-.text{
+.text {
     color: var(--bg);
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    overflow: hidden;
+    position: relative;
 }
 
-.pagination{
+.truncatedText {
+    /* Limite la hauteur du texte pour le tronquer à environ 8 mots */
+    max-height: 80px;
+    /* Ajustez selon la hauteur souhaitée pour le texte tronqué */
+    padding-bottom: 0;
+}
+
+.expandedText {
+    max-height: none;
+    padding-bottom: 10px;
+    /* Ajustez pour ajouter un espace sous le texte */
+}
+
+.toggleButton {
+    background-color: var(--bg);
+    color: var(--textColor);
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.toggleButton:hover {
+    transform: scale(1.1);
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--bg);
     text-align: center;
     margin-top: 20px;
     font-size: 1.5rem;
 }
 
+.pageButton {
+    background-color: var(--bg);
+    color: var(--textColor);
+    border: none;
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+.pageButton.disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.dots {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.activeDot {
+    background-color: var(--bg);
+}
+
 @media screen and (max-width: 640px) {
-    .card{
-        display: flex;
+    .card {
         flex-direction: column;
         align-items: center;
     }

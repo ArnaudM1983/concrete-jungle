@@ -1,0 +1,67 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  username  String   @unique
+  email     String   @unique
+  password  String
+  img       String?
+  isAdmin   Boolean  @default(false)
+
+  @@map("users")
+}
+
+model Programme {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  title     String   @unique @db.String
+  category  String   @db.String
+  location  String   @db.String
+  date      DateTime
+  time      String   @db.String
+  img       String?  @db.String
+
+  @@map("programmes") // Nom de la collection dans MongoDB
+}
+
+model Map {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  title     String   @db.String
+  category  String   @db.String
+  content   String
+  latitude  Float
+  longitude Float
+  img       String?  @db.String
+  
+  @@map("maps") // Nom de la collection dans MongoDB
+}
+
+model Info {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  title     String   @db.String
+  content   String   @db.String
+  
+  @@map("infos") // Nom de la collection dans MongoDB
+}
+
+model Actus {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  title     String   @db.String
+  content   String   @db.String
+  img       String?  @db.String
+  
+  @@map("actus") // Nom de la collection dans MongoDB
+}
+

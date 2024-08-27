@@ -1,29 +1,39 @@
 import React from 'react'
 import styles from './faq.module.css'
 
+// Fonction pour récupérer les données de l'API
+const getData = async () => {
+    // variable d'environnement pour l'URL de l'API
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  
+    // Effectue une requête GET pour obtenir les données depuis l'endpoint /infos
+    const res = await fetch(`${apiUrl}/infos`, {
+      cache: "no-store",
+    });
+  
+    if (!res.ok) {
+      throw new Error("Erreur");
+    }
+  
+    return res.json();
+  }
 
-const Faq = () => {
+// Composant principal pour afficher la FAQ
+const Faq = async() => {
+
+    const data = await getData()
+
     return (
         <div className={styles.container}>
             <h2 className={styles.title}>FAQ - INFORMATIONS PRATIQUES</h2>
-            <div className={styles.cardContainer}>
+            {data?.map(item=>(
+            <div key={item._id} className={styles.cardContainer}>
                 <div className={styles.card}>
-                    <p className={styles.titleCard}>Lorem ipsum</p>
-                    <p className={styles.text}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quibusdam deserunt dignissimos ab. Necessitatibus ducimus dicta beatae est. Dolores illum nisi doloribus repellendus qui numquam cupiditate porro tenetur repudiandae sapiente.</p>
-                </div>
-                <div className={styles.card}>
-                    <p className={styles.titleCard}>Lorem ipsum</p>
-                    <p className={styles.text}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quibusdam deserunt dignissimos ab. Necessitatibus ducimus dicta beatae est. Dolores illum nisi doloribus repellendus qui numquam cupiditate porro tenetur repudiandae sapiente.</p>
-                </div>
-                <div className={styles.card}>
-                    <p className={styles.titleCard}>Lorem ipsum</p>
-                    <p className={styles.text}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quibusdam deserunt dignissimos ab. Necessitatibus ducimus dicta beatae est. Dolores illum nisi doloribus repellendus qui numquam cupiditate porro tenetur repudiandae sapiente.</p>
-                </div>
-                <div className={styles.card}>
-                    <p className={styles.titleCard}>Lorem ipsum</p>
-                    <p className={styles.text}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quibusdam deserunt dignissimos ab. Necessitatibus ducimus dicta beatae est. Dolores illum nisi doloribus repellendus qui numquam cupiditate porro tenetur repudiandae sapiente.</p>
+                    <p className={styles.titleCard}>{item.title}</p>
+                    <p className={styles.text}>{item.content}</p>
                 </div>
             </div>
+            ))}
         </div>
     )
 }

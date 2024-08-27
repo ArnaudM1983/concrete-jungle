@@ -11,7 +11,7 @@ const Billeterie = () => {
       <p >BILLETS 1 JOUR</p>
       <p >PASS 2 JOURS</p>
       <p >PASS 3 JOURS</p>
-      <Link href='https://example.com/billetterie' className={styles.button}>ACCÉDER À LA BILLETTERIE</Link>
+      <Link href='https://www.ticketmaster.fr/fr' className={styles.button}>ACCÉDER À LA BILLETTERIE</Link>
     </div>
   )
 }

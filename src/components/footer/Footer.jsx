@@ -21,7 +21,7 @@ const Footer = () => {
           <FaLinkedin className={styles.icone} /></a>
       </div>
       <div className={styles.links}>
-        <Link href="/news" className={styles.link}>Actualités</Link>
+        <Link href="/#actus" className={styles.link}>Actualités</Link>
         <Link href="/mentions" className={styles.link}>Mentions légales</Link>
         <Link href="/cookies" className={styles.link}>Politique de cookies</Link>
       </div>
