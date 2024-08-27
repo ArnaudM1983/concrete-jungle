@@ -49,7 +49,7 @@ const ArtistDetail = async ({ params }) => {
     );
   } catch (error) {
     console.error('Erreur lors du chargement des données de l\'artiste:', error);
-    return <p>Erreur lors du chargement des données de l'artiste.</p>;
+    return <p>Erreur lors du chargement des données de l&apos;artiste.</p>;
   }
 };
 
